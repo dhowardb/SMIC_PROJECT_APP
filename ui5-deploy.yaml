@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: '2.6'
+metadata:
+  name: projectsdemoapp
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        ignoreCertError: true #add true for now ask basis for certificate
+        target:
+          url: https://smphckapd4s.sm.ph:44300/
+          client: '100'
+        app:
+          name: Z_DEMO_PROJ_HOW
+          description: Deploy to D4S100 as S4 Dev system
+          package: ZTEST_DEPLOY_HOW
+          transport: D4SK903968
+        exclude:
+          - /test/
