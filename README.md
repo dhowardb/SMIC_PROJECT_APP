@@ -1,4 +1,4 @@
-## Development Branch(pull this for dev purposes)
+## Development Branch(Pull for dev or testing purpose)
 
 ## Application Details
 
