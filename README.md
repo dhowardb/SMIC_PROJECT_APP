@@ -44,3 +44,15 @@ SMIC Projects Application
 #### Pre-requisites:
 
 1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version. (See https://nodejs.org)
+
+## Development Added
+
+### Excel Upload Handler
+
+- Create handler for excel upload using external modules(XLSX and ui5spreadsheetimporter from SAPUI5)
+
+```
+    npm install ui5-cc-spreadsheetimporter
+```
+
+- Create excel upload handler in TS source code under controller\ExcelUploadHandler

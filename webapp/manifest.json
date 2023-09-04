@@ -124,7 +124,24 @@
 									}
 								}
 							},
-							"initialLoad": "Enabled"
+							"initialLoad": "Enabled",
+							"controlConfiguration": {
+								"@com.sap.vocabularies.UI.v1.LineItem": {
+									"actions": {
+										"excelUpload": {
+											"press": "projectsdemoapp.ext.controller.ExcelUploadHandler.openSpreadsheetUploadDialog",
+											"visible": true,
+											"enabled": true,
+											"requiresSelection": false,
+											"text": "Excel Upload",
+											"position": {
+												"placement": "Before",
+												"anchor": "DataFieldForAction::com.sap.gateway.srvd.zui_demo_s4_project_interface.v0001.resetProject::com.sap.gateway.srvd.zui_demo_s4_project_interface.v0001.ProjectsType"
+											}
+										}
+									}
+								}
+							}
 						}
 					}
 				},
@@ -166,6 +183,14 @@
 						"controllerName": "projectsdemoapp.ext.controller.ListReport"
 					}
 				}
+			}
+		},
+		"resourceRoots": {
+			"cc.spreadsheetimporter.v0_24_0": "./thirdparty/customControl/spreadsheetImporter/v0_24_0"
+		},
+		"componentUsages": {
+			"spreadsheetImporter": {
+				"name": "cc.spreadsheetimporter.v0_24_0"
 			}
 		}
 	},
