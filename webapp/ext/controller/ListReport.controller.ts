@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import ControllerExtension from 'sap/ui/core/mvc/ControllerExtension';
 import ExtensionAPI from 'sap/fe/templates/ListReport/ExtensionAPI';
 

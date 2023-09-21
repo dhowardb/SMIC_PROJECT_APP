@@ -1,0 +1,45 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:macros="sap.fe.macros" controllerName="projectsdemoapp.ext.fragment.GroupFeedComponent">
+	<VBox id="vBox1">
+		<FeedInput
+			id="feedInputID"
+			class="sapUiSmallMarginTopBottom"
+			core:require="{ handler: 'projectsdemoapp/ext/fragment/GroupFeedComponent'}"
+			post="handler.onPost"
+			growing="true" />
+		<List 
+			id="feedsList"
+			noDataText="No Comments Found"
+			showSeparators="Inner"
+			growing="true"
+			items="{ path: '_Feeds',
+				 	 parameters: { expand: 'Feeds' },
+					 sorter: { path: 'LastChangedAt' } }" >
+			<FeedListItem 
+				id="feedListItemID"
+				sender="{Sender}"
+				core:require="{ handler: 'projectsdemoapp/ext/fragment/GroupFeedComponent'}"
+				senderPress="handler.onPress"
+				iconPress="handler.onPress"
+				iconDensityAware="false"
+				timestamp="{LastChangedAt}"
+				text="{Content}"
+				convertLinksToAnchorTags="All" >
+				<actions>
+					<!-- <FeedListItemAction 
+						id="feedListUpdateID" 
+						text="Update"
+						icon="sap-icon://edit"
+						core:require="{ handler: 'projectsdemoapp/ext/fragment/GroupFeedComponent'}"
+						press="handler.onPressEdit" /> -->
+					<FeedListItemAction 
+						id="feedListDeleteID" 
+						text="Delete"
+						icon="sap-icon://delete"
+						core:require="{ handler: 'projectsdemoapp/ext/fragment/GroupFeedComponent'}"
+						press="handler.onPressDelete" />
+				</actions>
+				
+			</FeedListItem>
+		</List>
+	</VBox>
+</core:FragmentDefinition>
